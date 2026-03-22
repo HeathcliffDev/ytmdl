@@ -1,8 +1,6 @@
-# Glomatico's YouTube Music Downloader
+YouTube Music Downloader
 
 A command-line app for downloading YouTube Music songs with tags from YouTube Music.
-
-**Discord Server:** <https://discord.gg/aBjMEZ9tnq>
 
 ## Features
 

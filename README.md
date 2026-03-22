@@ -13,9 +13,9 @@ A command-line app for downloading YouTube Music songs with tags from YouTube Mu
 
 * **Python 3.10 or higher** installed on your system.
 * **FFmpeg** on your system PATH.
-  * **Windows**: Download from [AnimMouse's FFmpeg Builds](https://github.com/AnimMouse/ffmpeg-stable-autobuild/releases).
+  * **Windows**: Download from [gyan.dev's FFmpeg Builds](https://www.gyan.dev/ffmpeg/builds/).
   * **Linux**: Download from [John Van Sickle's FFmpeg Builds](https://johnvansickle.com/ffmpeg/).
-* (Optional) The **cookies file** of your YouTube Music browser session in Netscape format (requires an active subscription).
+* (Optional) The **cookies file** of your YouTube Music browser session in Netscape format is necessary for premium formats (requires an active subscription) or restricted age songs.
   * **Firefox**: Use the [Export Cookies](https://addons.mozilla.org/addon/export-cookies-txt) extension.
   * **Chromium-based Browsers**: Use the [Open Cookies.txt](https://chromewebstore.google.com/detail/open-cookiestxt/gdocmgbfkjnnpapoeobnolbbkoibbcif) extension.
   * With cookies, you can download **age-restricted content**, **private playlists**, and songs in **premium formats** if you have an active Premium subscription. You'll have to set the cookies file path using the command line arguments or the config file (see [Configuration](#configuration)).
@@ -30,10 +30,27 @@ The following tools are optional but required for specific features. Add them to
 
 ## Installation
 
-Install the package `gytmdl` using pip:
+Clone the repository in your system using git:
 
 ```bash
-pip install .
+git clone https://github.com/HeathcliffDev/ytmdl.git
+```
+Move to the downloaded folder:
+
+```bash
+cd ytmdl
+```
+
+Install 'ytmdl' using pip:
+
+```bash
+pip install -e .
+```
+
+Check that it has been installed correctly:
+
+```bash
+ytmdl -version
 ```
 
 ## Usage
@@ -41,7 +58,7 @@ pip install .
 Run Gytmdl with the following command:
 
 ```bash
-gytmdl [OPTIONS] URLS...
+ytmdl [OPTIONS] URLS...
 ```
 
 ### Supported URL types
@@ -58,19 +75,19 @@ gytmdl [OPTIONS] URLS...
 * Download a song:
 
     ```bash
-    gytmdl "https://music.youtube.com/watch?v=3BFTio5296w"
+    ytmdl "https://music.youtube.com/watch?v=3BFTio5296w"
     ```
 
 * Download an album:
 
     ```bash
-    gytmdl "https://music.youtube.com/playlist?list=OLAK5uy_lvpL_Gr_aVEq-LaivwJaSK5EbFd4HeamM"
+    ytmdl "https://music.youtube.com/playlist?list=OLAK5uy_lvpL_Gr_aVEq-LaivwJaSK5EbFd4HeamM"
     ```
 
 * Choose which albums or singles to download from an artist:
 
     ```bash
-    gytmdl "https://music.youtube.com/channel/UCwZEU0wAwIyZb4x5G_KJp2w"
+    ytmdl "https://music.youtube.com/channel/UCwZEU0wAwIyZb4x5G_KJp2w"
     ```
 
 ### Interactive prompt controls
@@ -84,7 +101,7 @@ gytmdl [OPTIONS] URLS...
 
 Gytmdl can be configured by using the command line arguments or the config file.
 
-The config file is created automatically when you run Gytmdl for the first time at `~/.gytmdl/config.json` on Linux/macOS and `%USERPROFILE%\.gytmdl\config.json` on Windows.
+The config file is created automatically when you run Gytmdl for the first time at `~/.ytmdl/config.json` on Linux/macOS and `%USERPROFILE%\.ytmdl\config.json` on Windows.
 
 Config file values can be overridden using command line arguments.
 
@@ -104,11 +121,11 @@ Config file values can be overridden using command line arguments.
 | `--download-mode` / `download_mode`           | Download mode.                                                               | `ytdlp`                      |
 | `--po-token` / `po_token`                     | Proof of Origin (PO) Token.                                                  | `null`                       |
 | `--itag`, `-i` / `itag`                       | Itag (audio codec/quality).                                                  | `140`                        |
-| `--cover-size` / `cover_size`                 | Cover size.                                                                  | `1200`                       |
-| `--cover-format` / `cover_format`             | Cover format.                                                                | `jpg`                        |
-| `--cover-quality` / `cover_quality`           | Cover JPEG quality.                                                          | `94`                         |
+| `--cover-size` / `cover_size`                 | Cover size.                                                                  | `1400`                       |
+| `--cover-format` / `cover_format`             | Cover format.                                                                | `png`                        |
+| `--cover-quality` / `cover_quality`           | Cover JPEG quality.                                                          | `100`                         |
 | `--template-folder` / `template_folder`       | Template of the album folders as a format string.                            | `{album_artist}/{album}`     |
-| `--template-file` / `template_file`           | Template of the song files as a format string.                               | `{track:02d} {title}`        |
+| `--template-file` / `template_file`           | Template of the song files as a format string.                               | `{track:02d} {artist} {title}`        |
 | `--template-date` / `template_date`           | Date tag template.                                                           | `%Y-%m-%dT%H:%M:%SZ`         |
 | `--no-synced-lyrics` / `no_synced_lyrics`     | Don't save synced lyrics.                                                    | `false`                      |
 | `--synced-lyrics-only` / `synced_lyrics_only` | Skip track download and only save synced lyrics.                             | `false`                      |

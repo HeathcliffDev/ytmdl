@@ -22,7 +22,7 @@ A command-line app for downloading YouTube Music songs with tags from YouTube Mu
     irm https://deno.land/install.ps1 | iex
     ```
     
-* (Optional) The **cookies file** of your YouTube Music browser session in Netscape format is necessary for premium formats (requires an active subscription) or restricted age songs.
+* (Optional) The **cookies file** of your YouTube Music browser session in Netscape format is necessary for premium formats (requires an active subscription) or for restricted age songs.
   * **Firefox**: Use the [Export Cookies](https://addons.mozilla.org/addon/export-cookies-txt) extension.
   * **Chromium-based Browsers**: Use the [Open Cookies.txt](https://chromewebstore.google.com/detail/open-cookiestxt/gdocmgbfkjnnpapoeobnolbbkoibbcif) extension.
   * With cookies, you can download **age-restricted content**, **private playlists**, and songs in **premium formats** if you have an active Premium subscription. You'll have to set the cookies file path using the command line arguments or the config file (see [Configuration](#configuration)).

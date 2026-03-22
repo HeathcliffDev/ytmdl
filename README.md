@@ -15,7 +15,7 @@ A command-line app for downloading YouTube Music songs with tags from YouTube Mu
 * **FFmpeg** on your system PATH.
   * **Windows**: Download from [gyan.dev's FFmpeg Builds](https://www.gyan.dev/ffmpeg/builds/).
   * **Linux**: Download from [John Van Sickle's FFmpeg Builds](https://johnvansickle.com/ffmpeg/).
-* **Deno** installed in your system (is necessary if you are using cookies and poToken).
+* **Deno** install in your system (is necessary if you are using cookies and poToken).
   * **Windows**: You can execute this command for installed:
 
     ```bash
@@ -62,7 +62,7 @@ ytmdl -version
 
 ## Usage
 
-Run Gytmdl with the following command:
+Run ytmdl with the following command:
 
 ```bash
 ytmdl [OPTIONS] URLS...

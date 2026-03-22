@@ -1,4 +1,4 @@
-YouTube Music Downloader
+A simple YouTube Music Downloader
 
 A command-line app for downloading YouTube Music songs with tags from YouTube Music.
 

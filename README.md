@@ -33,7 +33,7 @@ The following tools are optional but required for specific features. Add them to
 Install the package `gytmdl` using pip:
 
 ```bash
-pip install gytmdl
+pip install .
 ```
 
 ## Usage

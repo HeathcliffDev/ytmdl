@@ -15,6 +15,11 @@ A command-line app for downloading YouTube Music songs with tags from YouTube Mu
 * **FFmpeg** on your system PATH.
   * **Windows**: Download from [gyan.dev's FFmpeg Builds](https://www.gyan.dev/ffmpeg/builds/).
   * **Linux**: Download from [John Van Sickle's FFmpeg Builds](https://johnvansickle.com/ffmpeg/).
+* **Deno** installed in your system (is necesary if you are using cookies and poToken).
+* * **Windows**: You can execute this command for installed:
+    ```bash
+    irm https://deno.land/install.ps1 | iex
+    ```
 * (Optional) The **cookies file** of your YouTube Music browser session in Netscape format is necessary for premium formats (requires an active subscription) or restricted age songs.
   * **Firefox**: Use the [Export Cookies](https://addons.mozilla.org/addon/export-cookies-txt) extension.
   * **Chromium-based Browsers**: Use the [Open Cookies.txt](https://chromewebstore.google.com/detail/open-cookiestxt/gdocmgbfkjnnpapoeobnolbbkoibbcif) extension.

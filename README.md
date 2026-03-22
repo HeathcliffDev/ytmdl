@@ -106,7 +106,7 @@ ytmdl [OPTIONS] URLS...
 
 ## Configuration
 
-Gytmdl can be configured by using the command line arguments or the config file.
+Ytmdl can be configured by using the command line arguments or the config file.
 
 The config file is created automatically when you run Gytmdl for the first time at `~/.ytmdl/config.json` on Linux/macOS and `%USERPROFILE%\.ytmdl\config.json` on Windows.
 
